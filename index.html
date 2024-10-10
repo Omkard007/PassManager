@@ -1,85 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Manager</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon" />
+  </head>
 
-<body>
-    
-    <nav>
+  <body>
+    <header>
         <div class="toast">
             <div>
             </div>
-            <span></span>
+            <p></p>
         </div>
-        <div class="nav-content">
-            <a href="#" class="logo">
-                <div class="logo-icon"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
-                    <!-- Background Circle -->
-                    <circle cx="100" cy="100" r="95" fill="url(#grad1)" stroke="#e6e6e6" stroke-width="5"/>
-                    
-                    <!-- Gradient Definition -->
-                    <defs>
-                      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color: #4caf50; stop-opacity:1" />
-                        <stop offset="100%" style="stop-color: #2196f3; stop-opacity:1" />
-                      </linearGradient>
-                    </defs>
-                    
-                    <!-- Enlarged Lock Body -->
-                    <rect x="50" y="70" width="100" height="90" rx="15" ry="15" fill="#ffffff" stroke="#333333" stroke-width="4"/>
-                  
-                    <!-- Enlarged Keyhole -->
-                    <circle cx="100" cy="125" r="12" fill="#333333"/>
-                    <rect x="95" y="125" width="10" height="30" fill="#333333"/>
-                    
-                    <!-- Enlarged Lock Arc -->
-                    <path d="M70 70 Q100 20, 130 70" fill="none" stroke="#333333" stroke-width="7" />
-                  </svg>
-                  </div>
-                PassManager
-            </a>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#passwords">Passwords</a></li>
-                <li><a href="#Aboutus">About Us</a></li>
+        <div>
+            <img src="logo.svg" alt="" />
+            <span>PassManager</span>
+        </div>
+        <p class="header-text">Save your passwords securely with PassManager</p>
+    </header>
 
-            </ul>
-        </div>
-    </nav>
-    <br><br><br><br>
     <div class="card">
-        <h2>Add New Password</h2>
-     <div class="form">
+      <h2>Add New Password</h2>
+      <div class="form">
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website" required />
 
-         <label for="website">Website:</label>
-         <input type="text" id="website" name="website" required>
-         
-         <label for="username">Username:</label>
-         <input type="text" id="username" name="username" required>
-         <div class="pass">
-             
-             <label for="password">Password:</label>
-             <input type="password" id="password" name="password" required>
-             <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-off"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg></span>
-            </div>
-            
-            <button id="submit">Add Password</button>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <div class="pass">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <span class="icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-eye-off"
+            >
+              <path
+                d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"
+              />
+              <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" />
+              <path
+                d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"
+              />
+              <path d="m2 2 20 20" /></svg
+          ></span>
         </div>
-       
-        </div>
-        
+
+        <button id="submit">Add Password</button>
+      </div>
+    </div>
+
     <div class="card">
-        <h2>Saved Passwords</h2>
-        <ul class="password-list">
-        </ul>
+      <h2>Saved Passwords</h2>
+      <ul class="password-list"></ul>
     </div>
     <script type="module" src="script.js"></script>
-</body>
-
+  </body>
 </html>
