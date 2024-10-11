@@ -1,74 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Manager</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon" />
+  </head>
 
-<body>
-    <nav>
-        <div class="nav-content">
-            <a href="#" class="logo">
-                <div class="logo-icon">🔒</div>
-                PassManager
-            </a>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#passwords">Passwords</a></li>
-                <li><a href="#Aboutus">About Us</a></li>
-
-            </ul>
+  <body>
+    <header>
+        <div class="toast">
+            <div>
+            </div>
+            <p></p>
         </div>
-    </nav>
-    <br><br><br><br>
+        <div>
+            <img src="logo.svg" alt="" />
+            <span>PassManager</span>
+        </div>
+        <p class="header-text">Save your passwords securely with PassManager</p>
+    </header>
+
     <div class="card">
-        <h2>Add New Password</h2>
-        <form>
-            <label for="website">Website:</label>
-            <input type="text" id="website" name="website" required>
+      <h2>Add New Password</h2>
+      <div class="form">
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website" required />
 
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <div class="pass">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <span class="icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="23"
+              height="23"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-eye-off"
+            >
+              <path
+                d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"
+              />
+              <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242" />
+              <path
+                d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"
+              />
+              <path d="m2 2 20 20" /></svg
+          ></span>
+        </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Add Password</button>
-        </form>
+        <button id="submit">Add Password</button>
+      </div>
     </div>
 
     <div class="card">
-        <h2>Saved Passwords</h2>
-        <ul class="password-list">
-            <li class="password-item">
-                <div class="password-info">
-                    <strong>Example.com</strong>
-                    <br>
-                    Username: shubhya
-                    <br>
-                    Password: 123456
-                </div>
-                <div class="password-actions">
-                    <button>Delete</button>
-                </div>
-            </li>
-            <li class="password-item">
-                <div class="password-info">
-                    <strong>AnotherExample.com</strong>
-                    <br>
-                    Username: OmkarDhumal
-                    <br>
-                    Password: 123456
-                </div>
-                <div class="password-actions">
-                    <button>Delete</button>
-                </div>
-            </li>
-        </ul>
+      <h2>Saved Passwords</h2>
+      <ul class="password-list"></ul>
     </div>
-</body>
-
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
